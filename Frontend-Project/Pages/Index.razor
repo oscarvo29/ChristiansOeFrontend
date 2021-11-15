@@ -1,0 +1,26 @@
+﻿@page "/"
+@using Frontend_Project.Models
+@using Frontend_Project.Services
+@inject IJSRuntime js
+
+<div id="map"></div>
+
+@code {
+
+    private MarkerServices _markerServices = new MarkerServices();
+    private readonly string API_KEY = "AIzaSyDjR5XsFSEoovZF9e7wiIJQVhiKY0ctRyc";
+    private Marker[] _markers { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _markers = await _markerServices.GetMarkers();
+    }
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        bool mapDidLoad = await js.InvokeAsync<bool>("createMap", API_KEY, _markers);
+    }
+
+    // API KEY:
+    // AIzaSyDjR5XsFSEoovZF9e7wiIJQVhiKY0ctRyc
+}
