@@ -61,3 +61,12 @@ html, body {
 .poi .business {
     visibility: hidden;
 }
+
+.burger {
+    left: 10px;
+    top: 10px;
+}
+
+.burger > * {
+    position: relative;
+}

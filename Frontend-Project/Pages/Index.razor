@@ -1,7 +1,10 @@
 ﻿@page "/"
 @using Frontend_Project.Models
 @using Frontend_Project.Services
+@using BrowserInterop.Extensions
+@using BrowserInterop.Geolocation
 @inject IJSRuntime js
+
 
 <div id="map"></div>
 
@@ -10,6 +13,7 @@
     private MarkerServices _markerServices = new MarkerServices();
     private readonly string API_KEY = "AIzaSyDjR5XsFSEoovZF9e7wiIJQVhiKY0ctRyc";
     private Marker[] _markers { get; set; }
+    private long[] coordinates { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -19,6 +23,22 @@
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         bool mapDidLoad = await js.InvokeAsync<bool>("createMap", API_KEY, _markers);
+        /* coordinates = SplitCoordinates(await js.InvokeAsync<string>("getLocation"));
+        Console.Write(coordinates[0]);
+        Console.Write(coordinates[1]); */
+    }
+
+    private long[] SplitCoordinates(string coordinatesString)
+    {
+        var coordinatesArr = new long[2];
+        var stringCoordinates = coordinatesString.Split(':');
+
+        if (long.TryParse(stringCoordinates[0], out coordinatesArr[0]) && long.TryParse(stringCoordinates[1], out coordinatesArr[1]))
+        {
+            return coordinatesArr;
+        }
+
+        return coordinatesArr;
     }
 
     // API KEY:

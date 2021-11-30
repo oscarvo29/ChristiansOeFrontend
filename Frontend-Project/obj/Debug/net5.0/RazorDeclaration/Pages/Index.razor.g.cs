@@ -110,6 +110,20 @@ using Frontend_Project.Services;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "/Users/oscarotterstad/code/c#eksamen/ChristiansOeFrontend/Frontend-Project/Pages/Index.razor"
+using BrowserInterop.Extensions;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "/Users/oscarotterstad/code/c#eksamen/ChristiansOeFrontend/Frontend-Project/Pages/Index.razor"
+using BrowserInterop.Geolocation;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -119,12 +133,13 @@ using Frontend_Project.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 8 "/Users/oscarotterstad/code/c#eksamen/ChristiansOeFrontend/Frontend-Project/Pages/Index.razor"
+#line 11 "/Users/oscarotterstad/code/c#eksamen/ChristiansOeFrontend/Frontend-Project/Pages/Index.razor"
        
 
     private MarkerServices _markerServices = new MarkerServices();
     private readonly string API_KEY = "AIzaSyDjR5XsFSEoovZF9e7wiIJQVhiKY0ctRyc";
     private Marker[] _markers { get; set; }
+    private long[] coordinates { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -134,6 +149,22 @@ using Frontend_Project.Services;
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         bool mapDidLoad = await js.InvokeAsync<bool>("createMap", API_KEY, _markers);
+        /* coordinates = SplitCoordinates(await js.InvokeAsync<string>("getLocation"));
+        Console.Write(coordinates[0]);
+        Console.Write(coordinates[1]); */
+    }
+
+    private long[] SplitCoordinates(string coordinatesString)
+    {
+        var coordinatesArr = new long[2];
+        var stringCoordinates = coordinatesString.Split(':');
+
+        if (long.TryParse(stringCoordinates[0], out coordinatesArr[0]) && long.TryParse(stringCoordinates[1], out coordinatesArr[1]))
+        {
+            return coordinatesArr;
+        }
+
+        return coordinatesArr;
     }
 
     // API KEY:

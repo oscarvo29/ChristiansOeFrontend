@@ -2,6 +2,25 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "BrowserInterop/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.8",
+          "Microsoft.JSInterop": "3.1.8"
+        },
+        "compile": {
+          "lib/netstandard2.1/BrowserInterop.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/BrowserInterop.dll": {}
+        },
+        "build": {
+          "buildTransitive/BrowserInterop.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BrowserInterop.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/5.0.9": {
         "type": "package",
         "dependencies": {
@@ -347,6 +366,25 @@
       }
     },
     "net5.0/browser-wasm": {
+      "BrowserInterop/1.1.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.8",
+          "Microsoft.JSInterop": "3.1.8"
+        },
+        "compile": {
+          "lib/netstandard2.1/BrowserInterop.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/BrowserInterop.dll": {}
+        },
+        "build": {
+          "buildTransitive/BrowserInterop.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/BrowserInterop.props": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/5.0.9": {
         "type": "package",
         "dependencies": {
@@ -693,6 +731,23 @@
     }
   },
   "libraries": {
+    "BrowserInterop/1.1.2": {
+      "sha512": "7BSD3iclsfKftdY2etSDdPFnkK0+etvXILsOkuFXDpP8Z7J1SLuJsbS/ydE+i3iZXPF7CiBChaOonJE1noE/PQ==",
+      "type": "package",
+      "path": "browserinterop/1.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "browserinterop.1.1.2.nupkg.sha512",
+        "browserinterop.nuspec",
+        "build/BrowserInterop.props",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "buildMultiTargeting/BrowserInterop.props",
+        "buildTransitive/BrowserInterop.props",
+        "lib/netstandard2.1/BrowserInterop.dll",
+        "staticwebassets/scripts.js"
+      ]
+    },
     "Microsoft.AspNetCore.Authorization/5.0.9": {
       "sha512": "fS4eD0OPTj29/8xnGybpbsre6OUFoeHX5J1HTSS6o/jmOYOaSyW+C0m/cmJSoVdl2VFaF0ZPggi2ATzYBYzq6w==",
       "type": "package",
@@ -1374,6 +1429,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "BrowserInterop >= 1.1.2",
       "Microsoft.AspNetCore.Components.WebAssembly >= 5.0.9",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 5.0.9",
       "Radzen.Blazor >= 3.12.1",
@@ -1417,6 +1473,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "BrowserInterop": {
+            "target": "Package",
+            "version": "[1.1.2, )"
+          },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",
             "version": "[5.0.9, )"

@@ -7,6 +7,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
+      "BrowserInterop.dll": "sha256-zicoRqfdLgYZIfgv3UsYRNO8bKWCkzdOaAG4cacW1jI=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-K6YmoZTchDdcMLTUQuvOLzigs5YvS4pdIZ1EMnSPnyg=",
       "Microsoft.AspNetCore.Components.dll": "sha256-\/Xgh7C+kOz7PYylH+p+R7aqOBEOyYmXmOXOCgsvtcs4=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-\/BAyu\/mUbmaw+l8ZTxpnapsydH6MfD3Y+wXAzeSB5sI=",
@@ -197,11 +198,11 @@
       "mscorlib.dll": "sha256-9AZ7YsJz\/p2gr4E0EQXdHBqwDxoXqtzxhqC6aRsa2K8=",
       "netstandard.dll": "sha256-yOOty6BTX3e57YAEHK5a4nku\/lj0vi7jg\/eQZAjbDQk=",
       "System.Private.CoreLib.dll": "sha256-rraBQp6NevIQiELPVfDFDl5pv9QVJqCiZhB5bkpiZ88=",
-      "Frontend-Project.dll": "sha256-50Cu4f4+i795yuL3QLvBbdTeOFR0Jr\/DMEysn2c5Ed0="
+      "Frontend-Project.dll": "sha256-IFc+2pp+5+OUvoSyflscf08nxdIiRKjL9Z93yqFdBMA="
     },
     "lazyAssembly": null,
     "pdb": {
-      "Frontend-Project.pdb": "sha256-DrkYlg9QChgcdXnsx3kOzDvFO\/V0vQpkzgcORiGQEgM="
+      "Frontend-Project.pdb": "sha256-O6A2rDpTLMqTpMYzw3bvlEq1MD9\/P5VjP8BGgzMChBU="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-L2vkcKzmXJtf+J7db5TbDMBckrgqJ5qc0ZzVIdRlm0I=",

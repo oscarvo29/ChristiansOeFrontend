@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "IjUuT8UK0YSEtgwDuF7waLY2aRRy0vZYGCQyHDxXNUSvjoXcAXY+7rPA2CBnabHEcw3igvNS7V8IPDzRyFve0A==",
+  "dgSpecHash": "Dmbv/hHS9jzy0XdhubzfojUuufqqlJ5dCPU/GIY2NB3y+BhjsrMh0QxlJnSFIZTuUhS7wvN+W1UXslYNuDVCuw==",
   "success": true,
   "projectFilePath": "/Users/oscarotterstad/code/c#eksamen/ChristiansOeFrontend/Frontend-Project/Frontend-Project.csproj",
   "expectedPackageFiles": [
+    "/Users/oscarotterstad/.nuget/packages/browserinterop/1.1.2/browserinterop.1.1.2.nupkg.sha512",
     "/Users/oscarotterstad/.nuget/packages/microsoft.aspnetcore.authorization/5.0.9/microsoft.aspnetcore.authorization.5.0.9.nupkg.sha512",
     "/Users/oscarotterstad/.nuget/packages/microsoft.aspnetcore.components/5.0.9/microsoft.aspnetcore.components.5.0.9.nupkg.sha512",
     "/Users/oscarotterstad/.nuget/packages/microsoft.aspnetcore.components.analyzers/5.0.9/microsoft.aspnetcore.components.analyzers.5.0.9.nupkg.sha512",

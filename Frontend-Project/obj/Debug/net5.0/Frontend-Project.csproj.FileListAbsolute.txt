@@ -636,3 +636,6 @@
 /Users/oscarotterstad/code/c#eksamen/ChristiansOeFrontend/Frontend-Project/obj/Debug/net5.0/Frontend-Project.dll
 /Users/oscarotterstad/code/c#eksamen/ChristiansOeFrontend/Frontend-Project/obj/Debug/net5.0/ref/Frontend-Project.dll
 /Users/oscarotterstad/code/c#eksamen/ChristiansOeFrontend/Frontend-Project/obj/Debug/net5.0/Frontend-Project.pdb
+/Users/oscarotterstad/code/c#eksamen/ChristiansOeFrontend/Frontend-Project/bin/Debug/net5.0/wwwroot/_framework/BrowserInterop.dll.gz
+/Users/oscarotterstad/code/c#eksamen/ChristiansOeFrontend/Frontend-Project/bin/Debug/net5.0/wwwroot/_framework/BrowserInterop.dll
+/Users/oscarotterstad/code/c#eksamen/ChristiansOeFrontend/Frontend-Project/obj/Debug/net5.0/build-gz/GhMBkBve.gz

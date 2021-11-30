@@ -104,8 +104,8 @@ using Radzen.Blazor;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "/Users/oscarotterstad/code/c#eksamen/ChristiansOeFrontend/Frontend-Project/Shared/NavMenu.razor"
-       
+#line 27 "/Users/oscarotterstad/code/c#eksamen/ChristiansOeFrontend/Frontend-Project/Shared/NavMenu.razor"
+        
     private bool collapseNavMenu = true;
 
     private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;

@@ -12,7 +12,6 @@ namespace Frontend_Project.Services
         public async Task<Marker[]> GetMarkers()
         {
             Marker[] markers = await http.GetFromJsonAsync<Marker[]>("https://localhost:8080/api/marker/index");
-
             return markers;
         }
     }
